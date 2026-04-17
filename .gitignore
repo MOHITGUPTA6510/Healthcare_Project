@@ -1,0 +1,17 @@
+# Virtual environment — DO NOT upload to GitHub
+venv/
+env/
+
+# Secret keys
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Django
+db.sqlite3
+*.log
+staticfiles/
+media/
