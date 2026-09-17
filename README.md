@@ -1,3 +1,7 @@
+Username (leave blank to use 'mohitgupta'): admin
+Email address: admin@example.com
+Password: 112233admin112233
+
 # 🏥 HealthCare Portal — Django Capstone Project
 
 A comprehensive **Healthcare Management System** built with Django covering:

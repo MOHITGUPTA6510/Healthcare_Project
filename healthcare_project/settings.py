@@ -1,6 +1,6 @@
 import os
 import dj_database_url
-
+from dotenv import load_dotenv
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,10 +56,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'healthcare_project.wsgi.application'
 
+load_dotenv(BASE_DIR / ".env")
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
+    "default": dj_database_url.parse(
+        os.environ["DATABASE_URL"],
+        conn_max_age=0,
     )
 }
 
